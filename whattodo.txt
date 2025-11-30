@@ -1,0 +1,7 @@
+git clone <repo-url>
+cd repo
+code .
+(edit files)
+git add .
+git commit -m "message"
+git push
