@@ -1,0 +1,11 @@
+timestamp,review,rating,sentiment
+2025-12-01 10:00:00,"The coffee was amazing!",5,positive
+2025-12-01 10:05:00,"Very slow service today.",2,negative
+2025-12-01 10:10:00,"Nice ambience and friendly staff.",4,positive
+2025-12-01 10:15:00,"Food was cold and not tasty.",1,negative
+2025-12-01 10:20:00,"Overall a good experience.",4,positive
+2025-12-01 10:25:00,"The place was too crowded.",3,neutral
+2025-12-01 10:30:00,"I loved the chocolate shake!",5,positive
+2025-12-01 10:35:00,"Not worth the price.",2,negative
+2025-12-01 10:40:00,"Service was quick and helpful.",5,positive
+2025-12-01 10:45:00,"Average experience, nothing special.",3,neutral
