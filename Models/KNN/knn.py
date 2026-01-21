@@ -1,19 +1,26 @@
-import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix, accuracy_score
 
-iris_data = pd.read_csv("iris.csv")
+iris = load_iris()
+X = iris.data     
+y = iris.target  
 
-X = iris_data.iloc[:, :-1]
-y = iris_data.iloc[:, -1]
 
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
 
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=1
+)
 knn = KNeighborsClassifier(n_neighbors=5)
-knn.fit(x_train, y_train)
+knn.fit(X_train, y_train)
 
-y_pred = knn.predict(x_test)
+y_pred = knn.predict(X_test)
+
+cm = confusion_matrix(y_test, y_pred)
+print("Confusion Matrix:\n", cm)
 
 accuracy = accuracy_score(y_test, y_pred)
-print("Accuracy is:", accuracy)
+print("Accuracy:", accuracy * 100, "%")
